@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: black;
+    padding:30px;
+    
+}
+
+header>nav>ul{
+display: flex;
+gap:30px;
+}
+
+header>nav>ul>li{
+    list-style: none;
+}
+
+header>nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+#search-btn,#search-btn1{
+    padding:20px;
+}
+
+#search-cont{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#movie-cont{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
