@@ -20,6 +20,7 @@ display(Search);
 
 function display(data) {
     let movieCont = document.getElementById("movie-cont");
+    movieCont.innerHTML="";
    console.log(movieCont);
     data.forEach((elem) => {
         let card = document.createElement("div");
