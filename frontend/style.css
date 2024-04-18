@@ -1,41 +1,77 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-header{
+header {
     background-color: black;
-    padding:30px;
-    
+    padding: 30px;
+
 }
 
-header>nav>ul{
-display: flex;
-gap:30px;
+header>nav>ul {
+    display: flex;
+    gap: 30px;
 }
 
-header>nav>ul>li{
+header>nav>ul>li {
     list-style: none;
 }
 
-header>nav>ul>li>a{
+header>nav>ul>li>a {
     text-decoration: none;
     color: white;
     font-size: 20px;
 }
 
-#search-btn,#search-btn1{
-    padding:20px;
+#search,
+#search-btn1 {
+    padding: 10px 20px;
 }
 
-#search-cont{
-    margin-top: 50px;
+#search-btn1 {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+#search-cont {
+    margin: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#movie-cont{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+#movie-cont {
+    display: grid;
+    padding: 10px 20px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.card>img {
+    height: 400px;
+    width: 100%;
+}
+
+.card>button {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: rgb(238, 65, 65);
+    outline: none;
+    font-weight: bold;
 }

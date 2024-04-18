@@ -39,11 +39,36 @@ function display(data) {
 
         let Type = document.createElement("p");
         Type.innerHTML = elem.Type;
+
         let button = document.createElement("button");
         button.innerText="Add to favourite";
+        button.addEventListener("click",()=>{addToFav(elem)});
 
 
-        card.appendChild(poster, title, Year, imdbID, Type,button);
+        card.append(poster, title, Year, imdbID, Type,button);
         movieCont.append(card);
     });
 }
+
+
+    async function addToFav(elem){
+        const {Poster:poster, Title:title, Type:types, Year:year, imdbID:id}=elem;
+        const data={poster,title,types,year,id};
+        console.log(poster," ",title," ",types," ",year);
+        try{
+            let res = await fetch("http://localhost:8080/favourite",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json",
+                },
+                body:JSON.stringify(data)
+
+            });
+            let dataa =await res.json();
+            console.log(dataa);
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
+
