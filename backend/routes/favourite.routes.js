@@ -26,7 +26,7 @@ favRouter.get("/",(req,res)=>{
 
 favRouter.post("/",(req,res)=>{
     try{
-        const query = "INSERT INTO post(id, poster, title, types, year) VALUES(?,?,?,?,?)";
+        const query = "INSERT INTO favourite(id, poster, title, types, year) VALUES(?,?,?,?,?)";
 
         const {id, poster, title, types, year} = req.body;
         database.query(query,[id, poster, title, types, year], (err,result)=>{

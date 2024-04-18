@@ -2,7 +2,7 @@ const {database} = require ("../config/db");
 
 function ensureTable(req,res,next){
     const query = `CREATE TABLE IF NOT EXISTS favourite(
-        id INT PRIMARY KEY,
+        id VARCHAR(255) PRIMARY KEY,
         poster VARCHAR(255) NOT NULL,
         title VARCHAR(255) NOT NULL,
         types VARCHAR(255) NOT NULL,
